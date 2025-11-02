@@ -151,6 +151,19 @@ nav.active {
 }
 
 @media (max-width: 991px) {
+
+    .twoImages {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .buyNowAndImages {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
     .nav-burger span {
         display: block;
     }
@@ -188,9 +201,11 @@ nav.active {
     }
 
     .buyNowAndImages a {
-        width: 9rem;
+        text-align: center;
+        white-space: nowrap;
+        width: 6.5rem;
         padding: 10px;
-        font-size: 1rem;
+        font-size: 13px;
     }
 }
 
@@ -248,11 +263,12 @@ nav.active {
     margin-inline: auto;
 }
 
+
+
 .ui-kit-little-images {
     display: flex;
     justify-content: center;
-    gap: 3rem;
-    flex-wrap: wrap;
+    gap: 5rem;
 }
 
 .ui-kit-little-images div {
@@ -271,6 +287,8 @@ nav.active {
     max-width: 100px;
     font-size: 12px;
 }
+
+
 
 .ui-kit-Bigimage {
     max-width: 100%;
@@ -295,6 +313,32 @@ nav.active {
 }
 
 @media (max-width:991px) {
+
+    .ui-kit-little-images img {
+        width: 60px;
+    }
+
+    .ui-kit-little-images p {
+        text-transform: uppercase;
+        max-width: 100px;
+        font-size: 10px;
+    }
+
+    .ui-kit-text h1 {
+        font-size: 3.8rem;
+    }
+
+
+    .ui-kit-text p:last-child {
+        font-size: 1.7rem;
+        max-width: 580px;
+        margin-inline: auto;
+    }
+
+    .ui-kit-text h1 span {
+        font-size: 2.6rem;
+    }
+
     .ui-kit {
         flex-direction: column;
         justify-content: center;
@@ -309,7 +353,7 @@ nav.active {
     }
 
     .ui-kit-little-images {
-        gap: 1rem;
+        gap: 2rem;
     }
 
     .ui-kit-Bigimage {
