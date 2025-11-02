@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <title>zero design</title>
+  </head>
+  <body>
+    <header>
+      <div class="logoAndNav">
+        <img src="images/logo.svg" alt="logo" class="logo" />
+        <nav id="menu">
+          <div class="close-btn" id="close">&times;</div>
+          <ul>
+            <li><a href="#">Landing</a></li>
+            <li><a href="#">Company</a></li>
+            <li><a href="#">CMS Pages</a></li>
+            <li><a href="#">Utility</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="buyNowAndImages">
+        <a href="#">$129 Buy Now</a>
+        <div class="twoImages">
+          <img src="images/lupa.svg" alt="lupa" width="28" />
+          <img src="images/telega.svg" alt="telega" width="28" />
+          <div class="nav-burger" id="nav-burger">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="ui-kit">
+        <div class="ui-kitTextAndLittleImages">
+          <div class="ui-kit-text">
+            <p>Design addicted</p>
+            <h1>A stylish UI Kit <span>for all web creatives</span></h1>
+            <p>
+              Zero is a Webflow Ecommerce and CMS UI kit including several
+              carefully designed page layouts.
+            </p>
+          </div>
+
+          <div class="ui-kit-little-images">
+            <div>
+              <img src="images/func-1.svg" alt="func-1" />
+              <p>smooth interactions</p>
+            </div>
+            <div>
+              <img src="images/func-2.svg" alt="func-2" />
+              <p>many page layouts</p>
+            </div>
+            <div>
+              <img src="images/func-3.svg" alt="func-3" />
+              <p>fully responsive</p>
+            </div>
+            <div>
+              <img src="images/func-4.svg" alt="func-4" />
+              <p>fast customization</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bigImageBox">
+          <img
+            src="images/hero-img.png"
+            alt="ui-kit-Bigimage"
+            class="ui-kit-Bigimage"
+          />
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const burger = document.getElementById("nav-burger"),
+        menu = document.getElementById("menu"),
+        closeBtn = document.getElementById("close");
+
+      burger.onclick = () => menu.classList.add("active");
+      closeBtn.onclick = () => menu.classList.remove("active");
+    </script>
+  </body>
+</html>
