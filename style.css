@@ -297,8 +297,6 @@ nav.active {
     transition: width 0.3s ease-in-out;
 }
 
-/* ---------- Media Queries ---------- */
-
 @media (max-width:1330px) {
     .ui-kit {
         justify-content: flex-start;
@@ -358,4 +356,15 @@ nav.active {
     .ui-kit-Bigimage {
         width: calc(728px / 1.2);
     }
+}
+
+@media(max-width:767px) {
+    .lupaAndTelega {
+        display: flex !important;
+        flex-direction: column;
+    }
+}
+
+.lupaAndTelega {
+    display: contents;
 }
