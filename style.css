@@ -468,10 +468,10 @@ nav.active {
 
     .zero-designBlocks .about__group a {
         display: inline-block;
-        padding: 10px 25px 10px 15px;
+        padding: 10px 20px 10px 15px;
         color: var(--white);
         background-color: var(--black);
-        font-size: 13px;
+        font-size: 12px;
     }
 
 }
