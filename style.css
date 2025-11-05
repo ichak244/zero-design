@@ -384,27 +384,21 @@ nav.active {
     transition: width 0.3s ease-in-out;
 }
 
-
-
 .zero-designText {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    /* white-space: nowrap; */
-}
-
-.zero-designText h2,
-.zero-designText p {
-    margin: 0;
 }
 
 .zero-designText h2 {
+    margin: 0;
     white-space: nowrap;
     font-size: 6rem;
     font-weight: normal;
 }
 
 .zero-designText p {
+    margin: 0;
     font-size: 1.2rem;
     max-width: 600px;
 }
@@ -413,65 +407,149 @@ nav.active {
     display: flex;
     flex-direction: column;
     gap: 7px;
-    flex-wrap: wrap;
 }
 
-.zero-designBlocks .about__group {
+.about__group {
     display: flex;
     gap: 10px;
 }
 
-.zero-designBlocks .about__group a {
-    display: inline-block;
+.about__group a {
     padding: 10px 35px 10px 15px;
     color: var(--white);
-    background-color: var(--black);
+    background: var(--black);
     font-size: 14px;
     white-space: nowrap;
 }
 
-@media(max-width:991px) {
+.about__group a:hover {
+    background: #ffc918;
+}
+
+@media (max-width:991px) {
     .zero-design {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         flex-direction: column-reverse;
         gap: 4rem;
         margin-top: 6rem;
         padding-inline: 2rem;
     }
 
+    .zero-designText {
+        padding-left: 2rem;
+    }
 
     .zero-designText h2 {
         font-size: 4.5rem;
     }
-
-    .zero-designImage {
-        max-width: 100%;
-        object-fit: cover;
-        transition: width 0.3s ease-in-out;
-    }
-
-
-    .zero-designText {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        padding-left: 2rem;
-    }
 }
 
-@media(max-width:767px) {
+@media (max-width:767px) {
     .zero-designText h2 {
         font-size: 3.5rem;
     }
 
-    .zero-designBlocks .about__group a {
-        display: inline-block;
+    .about__group a {
         padding: 10px 20px 10px 15px;
-        color: var(--white);
-        background-color: var(--black);
         font-size: 12px;
     }
+}
 
+/* landing-pages */
+
+.landing-pages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 8rem;
+    margin-bottom: 60rem;
+}
+
+.landing-pages h2 {
+    background-color: var(--black);
+    width: 25rem;
+    color: var(--white);
+    white-space: nowrap;
+    font-size: 2.3rem;
+    padding: 5px 5rem 15px 13px;
+    margin-left: 4.4rem;
+    font-weight: normal;
+    align-self: self-start;
+}
+
+.landing-pagesImages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 3rem;
+}
+
+.landing-pagesImages figure {
+    padding: 30px;
+    background-color: #F5F5F5;
+}
+
+.landing-pagesImages figure:hover {
+    transform: scale(1.1);
+}
+
+.landing-pagesImages figure figcaption {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    display: inline-block;
+    padding-top: 1.3rem;
+    padding-bottom: 3rem;
+}
+
+.landing-pagesImages figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.landing-pagesImages figure:active,
+.landing-pagesImages figure:focus {
+    background-color: #ffc918;
+    border-radius: 50px;
+}
+
+@media(max-width:991px) {
+    .landing-pages h2 {
+        width: 20rem;
+        font-size: 1.8rem;
+        padding: 5px 1rem 15px 30px;
+    }
+
+    .landing-pagesImages figure {
+        padding: 20px;
+    }
+}
+
+@media(max-width:767px) {
+    .landing-pages h2 {
+        width: 18rem;
+        font-size: 1.5rem;
+        padding: 5px 1rem 15px 30px;
+    }
+
+    .landing-pagesImages {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 1rem;
+    }
+
+    .landing-pagesImages figure {
+        width: 38vw;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .landing-pagesImages figure figcaption {
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        display: inline-block;
+        padding-top: 1.3rem;
+        padding-bottom: 1rem;
+    }
 }
