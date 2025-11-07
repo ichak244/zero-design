@@ -454,67 +454,65 @@ nav.active {
     }
 }
 
-/* landing-pages */
 
+/* landing-pages */
 .landing-pages {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    margin-top: 8rem;
-    margin-bottom: 60rem;
+    margin: 8rem 0 1rem;
 }
 
 .landing-pages h2 {
-    background-color: var(--black);
-    width: 25rem;
+    background: var(--black);
     color: var(--white);
-    white-space: nowrap;
-    font-size: 2.3rem;
+    width: 25rem;
     padding: 5px 5rem 15px 13px;
     margin-left: 4.4rem;
+    font-size: 2.3rem;
     font-weight: normal;
-    align-self: self-start;
+    white-space: nowrap;
+    align-self: flex-start;
 }
 
 .landing-pagesImages {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 3rem;
+    gap: 3rem;
 }
 
 .landing-pagesImages figure {
     padding: 30px;
-    background-color: #F5F5F5;
+    background: #f5f5f5;
+    transition: transform 0.3s;
 }
 
 .landing-pagesImages figure:hover {
     transform: scale(1.1);
 }
 
-.landing-pagesImages figure figcaption {
-    text-transform: uppercase;
-    font-size: 1.6rem;
-    display: inline-block;
-    padding-top: 1.3rem;
-    padding-bottom: 3rem;
-}
-
-.landing-pagesImages figure img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.landing-pagesImages figure:active,
 .landing-pagesImages figure:focus {
-    background-color: #ffc918;
+    background: #ffc918;
     border-radius: 50px;
 }
 
-@media(max-width:991px) {
+.landing-pagesImages img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.landing-pagesImages figcaption {
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    padding: 1.3rem 0 3rem;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
     .landing-pages h2 {
         width: 20rem;
         font-size: 1.8rem;
@@ -526,17 +524,14 @@ nav.active {
     }
 }
 
-@media(max-width:767px) {
+@media (max-width: 767px) {
     .landing-pages h2 {
         width: 18rem;
         font-size: 1.5rem;
-        padding: 5px 1rem 15px 30px;
     }
 
     .landing-pagesImages {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 1rem;
+        gap: 1rem;
     }
 
     .landing-pagesImages figure {
@@ -545,11 +540,106 @@ nav.active {
         margin: 10px;
     }
 
-    .landing-pagesImages figure figcaption {
-        text-transform: uppercase;
+    .landing-pagesImages figcaption {
         font-size: 1.2rem;
-        display: inline-block;
-        padding-top: 1.3rem;
+        padding-bottom: 1rem;
+    }
+}
+
+
+/* company */
+
+.company {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 8rem 0 1rem;
+}
+
+.company h2 {
+    background: var(--black);
+    color: var(--white);
+    width: 17rem;
+    padding: 5px 5rem 15px 25px;
+    margin-left: 5.5rem;
+    font-size: 2.2rem;
+    font-weight: normal;
+    white-space: nowrap;
+    align-self: flex-start;
+}
+
+
+.company-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+}
+
+.company-images figure {
+    margin: 0;
+    padding: 30px;
+    background: #f5f5f5;
+}
+
+.company-images figure:hover {
+    transform: scale(1.1);
+}
+
+.company-images figure:focus {
+    background: #ffc918;
+    border-radius: 50px;
+}
+
+.company-images img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.company-images figcaption {
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    padding: 1.3rem 0 3rem;
+}
+
+@media (max-width: 991px) {
+    .company h2 {
+        width: 15rem;
+        font-size: 1.8rem;
+        padding: 5px 1rem 15px 15px;
+        margin-left: 0;
+        align-self: center;
+    }
+
+    .company-images figure {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .company-images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+    }
+
+    .company h2 {
+        margin-left: 2.8rem;
+        width: 14rem;
+        font-size: 1.7rem;
+    }
+
+    .company-images figure {
+        width: 38vw;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .company-images figcaption {
+        font-size: 1.2rem;
         padding-bottom: 1rem;
     }
 }
